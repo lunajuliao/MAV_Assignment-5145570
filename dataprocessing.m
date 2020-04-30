@@ -27,13 +27,13 @@ while a<=690
     [w,h,x,y]=dimension(data,a,pic_name);
     %save the first gate information for an image
     t=[x;y;w;h];
-    if strcmp(data.Var1(a),data.Var1(a+1))
+    if size(data,1)>= a+1 && strcmp(data.Var1(a),data.Var1(a+1))
         a=a+1;
         [w,h,x,y]=dimension(data,a,pic_name);
         %save the second gate information for an image
         t1=[x;y;w;h];
         
-        if strcmp(data.Var1(a),data.Var1(a+1))
+        if size(data,1)>= a+1 && strcmp(data.Var1(a),data.Var1(a+1))
             a=a+1;
             [w,h,x,y]=dimension(data,a,pic_name);
             %save the third gate information for an image
